@@ -27,10 +27,22 @@ etnia <- read_csv("Etnia.csv")
 etnia2 <- etnia %>% 
   filter(gender != "-")
 
-etnia3 <- etnia %>% 
+etnia3 <- etnia2 %>% 
   filter(gender == "F")
 
 write.csv(etnia3, "gender2.csv", row.names = FALSE)
+```
+
+```{r}
+dados <- read_csv("Dados.csv")
+
+dados2 <- dados %>% 
+  filter(genero != "-")
+
+dados3 <- dados2 %>% 
+  filter(genero == "F")
+
+write.csv(dados3, "dados2.csv", row.names = FALSE)
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
